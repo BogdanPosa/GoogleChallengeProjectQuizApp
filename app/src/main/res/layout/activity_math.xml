@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.projectquizapp.MathActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            style="@style/Image"
+            android:src="@drawable/back4">
+
+        </ImageView>
+        <TextView
+            style="@style/Title"
+            android:text="@string/TitleMath" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/LLQ5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:saveEnabled="true">
+
+                        <TextView
+                            style="@style/SubTitle"
+                            android:text="@string/Intrebare5" />
+
+                        <EditText
+                            android:id="@+id/text_input"
+                            style="@style/Body"
+                            android:layout_width="match_parent"
+                            android:layout_marginStart="0dp"
+                            android:hint="@string/hint"
+                            android:inputType="textCapWords" />
+
+                        <Button
+                            android:id="@+id/submit1"
+                            style="@style/Button"
+                            android:background="@drawable/mybutton"
+                            android:onClick="subQ5Clicked"
+                            android:text="@string/Submit1" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:saveEnabled="true">
+
+                    <LinearLayout
+                        android:id="@+id/LLQ6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/SubTitle"
+                            android:text="@string/Intrebare6" />
+
+                        <RadioGroup
+                            android:id="@+id/rgQuestion6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+
+                            <RadioButton
+                                style="@style/Body"
+                                android:text="@string/Q6Varianta1" />
+
+                            <RadioButton
+                                style="@style/Body"
+                                android:text="@string/Q6Varianta2" />
+
+                            <RadioButton
+                                android:id="@+id/rb3Answer6"
+                                style="@style/Body"
+                                android:text="@string/Q6Varianta3" />
+
+                            <RadioButton
+                                style="@style/Body"
+                                android:text="@string/Q6Varianta4" />
+
+                        </RadioGroup>
+
+                        <Button
+                            android:id="@+id/submit2"
+                            style="@style/Button"
+                            android:background="@drawable/mybutton"
+                            android:onClick="subQ6Clicked"
+                            android:text="@string/Submit2" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:saveEnabled="true">
+                    <LinearLayout
+                        android:id="@+id/LLQ7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/SubTitle"
+                            android:text="@string/Intrebare7" />
+
+                        <CheckBox
+                            android:id="@+id/Q7RightAnswer1"
+                            style="@style/Body"
+                            android:text="@string/Q7Varianta1" />
+
+                        <CheckBox
+                            style="@style/Body"
+                            android:text="@string/Q7Varianta2" />
+
+                        <CheckBox
+                            android:id="@+id/Q7RightAnswer3"
+                            style="@style/Body"
+                            android:text="@string/Q7Varianta3" />
+
+                        <CheckBox
+                            style="@style/Body"
+                            android:text="@string/Q7Varianta4" />
+
+                        <Button
+                            android:id="@+id/submit3"
+                            style="@style/Button"
+                            android:background="@drawable/mybutton"
+                            android:onClick="subQ7Clicked"
+                            android:text="@string/Submit3" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:saveEnabled="true">
+                    <LinearLayout
+                        android:id="@+id/LLQ8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            style="@style/SubTitle"
+                            android:text="@string/Intrebare8" />
+                        <RadioGroup
+                            android:id="@+id/rgQuestion8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <RadioButton
+                                style="@style/Body"
+                                android:text="@string/Q8Varianta1" />
+                            <RadioButton
+                                style="@style/Body"
+                                android:text="@string/Q8Varianta2" />
+                            <RadioButton
+                                android:id="@+id/rb3Answer8"
+                                style="@style/Body"
+                                android:text="@string/Q8Varianta3" />
+                            <RadioButton
+                                style="@style/Body"
+                                android:text="@string/Q8Varianta4" />
+                        </RadioGroup>
+                        <Button
+                            android:id="@+id/submit4"
+                            style="@style/Button"
+                            android:background="@drawable/mybutton"
+                            android:onClick="subQ8Clicked"
+                            android:text="@string/Submit4" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/progressimage"
+                    android:layout_width="200sp"
+                    android:layout_height="200sp"
+                    android:layout_gravity="center_horizontal"
+                    android:saveEnabled="true"
+                    android:src="@drawable/image04" />
+                <Button
+                    android:id="@+id/back"
+                    style="@style/Button"
+                    android:background="@drawable/mybutton"
+                    android:text="@string/Back1" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.projectquizapp.MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            style="@style/Image"
+            android:src="@drawable/back1">
+        </ImageView>
+        <TextView
+            android:id="@+id/motto"
+            style="@style/Title"
+            android:text="@string/Motto"
+            android:textSize="24sp" />
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/mylayout"
+        android:orientation="vertical">
+        <TextView
+        style="@style/SubTitle"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/SelectSubject" />
+        <RadioGroup
+        style="@style/Body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/buttonSelectionA"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Englishvocabulary" />
+        <RadioButton
+            android:id="@+id/buttonSelectionB"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/BasicMath" />
+    </RadioGroup>
+        <Button
+        android:id="@+id/start"
+        style="@style/Button"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/mybutton"
+        android:text="@string/Starthelping" />
+    </LinearLayout>
+    </LinearLayout>
+</ScrollView>

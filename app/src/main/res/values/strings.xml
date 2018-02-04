@@ -1,0 +1,87 @@
+<resources>
+    <string name="app_name">Make World Better</string>
+
+
+     <!--Strings for activity Main-->
+
+    <string name="Motto">Together we can make the world better</string>
+    <string name="Disclaimer">For each right answer \n We\'ll give a meal for the ones in need</string>
+    <string name="pick_one">"Pick one category!"</string>
+    <string name="SelectSubject">"Select a subject"</string>
+    <string name="Starthelping"> "Start helping"</string>
+    <string name="Englishvocabulary">" English vocabulary"</string>
+    <string name="BasicMath">"Basic Math"</string>
+
+    <!--Strings for activity Math-->
+
+    <string name="TitleMath">"Add some food on the table! "</string>
+    <string name="Intrebare5">"1) 0.4 x 3 = "</string>
+    <string name="hint">"Type your answer here"</string>
+    <string name="Submit1">"Submit"</string>
+    <string name="Intrebare6">"2) 1.1 x 1.1 = "</string>
+    <string name="Q6Varianta1">"11.1"</string>
+    <string name="Q6Varianta2">"111"</string>
+    <string name="Q6Varianta3">"1.21 "</string>
+    <string name="Q6Varianta4">"12.1"</string>
+    <string name="Submit2">"Submit"</string>
+    <string name="Intrebare7">"3) A^2 + A^2 = "</string>
+    <string name="Q7Varianta1">"A^2 x 2 "</string>
+    <string name="Q7Varianta2">"A^4"</string>
+    <string name="Q7Varianta3">"2A^2 "</string>
+    <string name="Q7Varianta4">"2A^4"</string>
+    <string name="Submit3">"Submit"</string>
+    <string name="Intrebare8">"4) 1/2 / 2/5 = "</string>
+    <string name="Q8Varianta1">"3/4"</string>
+    <string name="Q8Varianta2">"2/5"</string>
+    <string name="Q8Varianta3">"5/4 "</string>
+    <string name="Q8Varianta4">"3/5"</string>
+    <string name="Submit4">"Submit"</string>
+    <string name="Back1">"Home"</string>
+
+    <!--Strings for activity Result-->
+
+    <string name="CongradulationsMessage">"Thank you for helping!"</string>
+    <string name="Score">"Your score is:"</string>
+    <string name="Back2">"Home"</string>
+    <string name="Share">"Share"</string>
+    <string name="SendOpinion">"Send your opinion"</string>
+    <string name="Suggest"><u>"Suggest an improvement"</u></string>
+    <string name="Suggestion1">"More subjects"</string>
+    <string name="Suggestion2">"More questions"</string>
+    <string name="Suggestion3">"More functions"</string>
+    <string name="Feedback">"Do you like the app?"</string>
+    <string name="YesAnswer">"Yes"</string>
+    <string name="NoAnswer">"No"</string>
+    <string name="SendFeed">"Send feedback"</string>
+
+    <!--Strings for activity Vocabulary-->
+
+    <string name="TitleVocabulary">"Let's talk about hunger"</string>
+    <string name="Question1">"1) <b>rhabdomancy</b> means: "</string>
+    <string name="Q1Varianta1">"divination with a rod, wand, or the like "</string>
+    <string name="Q1Varianta2">"divining with crystal, or the like"</string>
+    <string name="Q1Varianta3">"crazy about rhubarb"</string>
+    <string name="Q1Varianta4">"obsession with red"</string>
+
+    <string name="Question2">"2) <b>rheology</b> means: "</string>
+    <string name="Q2Varianta1">"study of heat"</string>
+    <string name="Q2Varianta2">"flow of matter "</string>
+    <string name="Q2Varianta3">"study of rivers"</string>
+    <string name="Q2Varianta4">"heat flow patterns"</string>
+
+    <string name="Question3">"3) <b>sciage</b> means: "</string>
+    <string name="Q3Varianta1">"saw teeth"</string>
+    <string name="Q3Varianta2">"scraping"</string>
+    <string name="Q3Varianta3">"scar tissue"</string>
+    <string name="Q3Varianta4">"saw-like movement "</string>
+
+    <string name="Question4">"4) <b>lansquenet</b> means: "</string>
+    <string name="Q4Varianta1">"basket of fruit"</string>
+    <string name="Q4Varianta2">"card game "</string>
+    <string name="Q4Varianta3">"fancy dog collar"</string>
+    <string name="Q4Varianta4">"lacy bodice"</string>
+
+    <string name="Submit5">"Submit"</string>
+    <string name="Back3">"Home"</string>
+
+</resources>
