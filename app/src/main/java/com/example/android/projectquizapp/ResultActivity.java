@@ -7,14 +7,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class ResultActivity extends AppCompatActivity {
+
+    public Button sendfeed;
+    public Button backbut2;
+    public Button share;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,21 +25,17 @@ public class ResultActivity extends AppCompatActivity {
         sendfeedback();
         share();
 
-            TextView text= (TextView)findViewById(R.id.Score);
-            text.setText(getIntent().getExtras().getString("scor"));
+        TextView text = findViewById(R.id.Score);
+        text.setText(getIntent().getExtras().getString("scor"));
 
     }
-
-    public Button sendfeed;
-    public Button backbut2;
-    public Button share;
 
     /**
      * This method starts the Main activity
      */
 
     public void goBack2() {
-        backbut2 = (Button) findViewById(R.id.back2);
+        backbut2 = findViewById(R.id.back2);
         backbut2.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -54,13 +51,13 @@ public class ResultActivity extends AppCompatActivity {
      * This method display the Feedback responses
      */
     public void sendfeedback() {
-        sendfeed = (Button) findViewById(R.id.sendfeedback);
+        sendfeed = findViewById(R.id.sendfeedback);
         sendfeed.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
 
-                RadioGroup radioGroupYN = (RadioGroup) findViewById(R.id.rgFeedbackYN);
+                RadioGroup radioGroupYN = findViewById(R.id.rgFeedbackYN);
                 int ratedapp = radioGroupYN.getCheckedRadioButtonId();
                 if (ratedapp == -1) {
                     Context context = getApplicationContext();
@@ -97,7 +94,7 @@ public class ResultActivity extends AppCompatActivity {
      * This method intents the mail
      */
     public void share() {
-        share = (Button) findViewById(R.id.share);
+        share = findViewById(R.id.share);
         share.setOnClickListener(new View.OnClickListener() {
 
             @Override

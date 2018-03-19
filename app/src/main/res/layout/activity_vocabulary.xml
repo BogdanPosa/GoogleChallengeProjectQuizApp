@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,21 +10,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <ImageView
             style="@style/Image"
-            android:src="@drawable/back3">
-        </ImageView>
+            android:contentDescription="@string/desc5"
+            android:src="@drawable/back3" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <TextView
                 style="@style/Title"
-                android:text="@string/TitleVocabulary"/>
+                android:text="@string/TitleVocabulary" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:baselineAligned="false"
                 android:orientation="horizontal">
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -33,32 +38,39 @@
                     android:layout_weight="1"
                     android:background="@drawable/mylayout2"
                     android:orientation="vertical">
+
                     <TextView
                         android:id="@+id/Question1"
                         style="@style/SubTitle"
-                        android:text="@string/Question1"/>
+                        android:text="@string/Question1" />
+
                     <RadioGroup
                         android:id="@+id/rgQuestion1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
+
                         <RadioButton
                             android:id="@+id/rb1Answer1"
                             style="@style/Body"
-                            android:text="@string/Q1Varianta1"/>
+                            android:text="@string/Q1Varianta1" />
+
                         <RadioButton
                             android:id="@+id/rb1Answer2"
                             style="@style/Body"
-                            android:text="@string/Q1Varianta2"/>
+                            android:text="@string/Q1Varianta2" />
+
                         <RadioButton
                             android:id="@+id/rb1Answer3"
                             style="@style/Body"
-                            android:text="@string/Q1Varianta3"/>
+                            android:text="@string/Q1Varianta3" />
+
                         <RadioButton
                             android:id="@+id/rb1Answer4"
                             style="@style/Body"
-                            android:text="@string/Q1Varianta4"/>
+                            android:text="@string/Q1Varianta4" />
                     </RadioGroup>
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -66,38 +78,47 @@
                     android:layout_weight="1"
                     android:background="@drawable/mylayout2"
                     android:orientation="vertical">
+
                     <TextView
                         android:id="@+id/Question2"
                         style="@style/SubTitle"
-                        android:text="@string/Question2"/>
+                        android:text="@string/Question2" />
+
                     <RadioGroup
                         android:id="@+id/rgQuestion2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="40dp">
+
                         <RadioButton
                             android:id="@+id/rb2Answer1"
                             style="@style/Body"
-                            android:text="@string/Q2Varianta1"/>
+                            android:text="@string/Q2Varianta1" />
+
                         <RadioButton
                             android:id="@+id/rb2Answer2"
                             style="@style/Body"
-                            android:text="@string/Q2Varianta2"/>
+                            android:text="@string/Q2Varianta2" />
+
                         <RadioButton
                             android:id="@+id/rb2Answer3"
                             style="@style/Body"
-                            android:text="@string/Q2Varianta3"/>
+                            android:text="@string/Q2Varianta3" />
+
                         <RadioButton
                             android:id="@+id/rb2Answer4"
                             style="@style/Body"
-                            android:text="@string/Q2Varianta4"/>
+                            android:text="@string/Q2Varianta4" />
                     </RadioGroup>
                 </LinearLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:baselineAligned="false"
                 android:orientation="horizontal">
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -105,32 +126,39 @@
                     android:layout_weight="1"
                     android:background="@drawable/mylayout"
                     android:orientation="vertical">
+
                     <TextView
                         android:id="@+id/Question3"
                         style="@style/SubTitle"
-                        android:text="@string/Question3"/>
+                        android:text="@string/Question3" />
+
                     <RadioGroup
                         android:id="@+id/rgQuestion3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
+
                         <RadioButton
                             android:id="@+id/rb3Answer1"
                             style="@style/Body"
-                            android:text="@string/Q3Varianta1"/>
+                            android:text="@string/Q3Varianta1" />
+
                         <RadioButton
                             android:id="@+id/rb3Answer2"
                             style="@style/Body"
-                            android:text="@string/Q3Varianta2"/>
+                            android:text="@string/Q3Varianta2" />
+
                         <RadioButton
                             android:id="@+id/rb3Answer3"
                             style="@style/Body"
-                            android:text="@string/Q3Varianta3"/>
+                            android:text="@string/Q3Varianta3" />
+
                         <RadioButton
                             android:id="@+id/rb3Answer4"
                             style="@style/Body"
-                            android:text="@string/Q3Varianta4"/>
+                            android:text="@string/Q3Varianta4" />
                     </RadioGroup>
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -138,10 +166,12 @@
                     android:layout_weight="1"
                     android:background="@drawable/mylayout"
                     android:orientation="vertical">
+
                     <TextView
                         android:id="@+id/Question4"
                         style="@style/SubTitle"
-                        android:text="@string/Question4"/>
+                        android:text="@string/Question4" />
+
                     <RadioGroup
                         android:id="@+id/rgQuestion4"
                         android:layout_width="match_parent"
@@ -151,38 +181,40 @@
                         <RadioButton
                             android:id="@+id/rb4Answer1"
                             style="@style/Body"
-                            android:text="@string/Q4Varianta1"/>
+                            android:text="@string/Q4Varianta1" />
 
                         <RadioButton
                             android:id="@+id/rb4Answer2"
                             style="@style/Body"
-                            android:text="@string/Q4Varianta2"/>
+                            android:text="@string/Q4Varianta2" />
 
 
                         <RadioButton
                             android:id="@+id/rb4Answer3"
                             style="@style/Body"
-                            android:text="@string/Q4Varianta3"/>
+                            android:text="@string/Q4Varianta3" />
 
                         <RadioButton
                             android:id="@+id/rb4Answer4"
                             style="@style/Body"
-                            android:text="@string/Q4Varianta4"/>
+                            android:text="@string/Q4Varianta4" />
 
                     </RadioGroup>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
+
         <Button
             android:id="@+id/submit1"
             style="@style/Button"
             android:background="@drawable/mybutton"
-            android:text="@string/Submit5"/>
+            android:text="@string/Submit5" />
+
         <Button
             android:id="@+id/back1"
             style="@style/Button"
             android:layout_gravity="center"
             android:background="@drawable/mybutton"
-            android:text="@string/Back3"/>
+            android:text="@string/Back3" />
     </LinearLayout>
 </ScrollView>

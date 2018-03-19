@@ -83,5 +83,10 @@
 
     <string name="Submit5">"Submit"</string>
     <string name="Back3">"Home"</string>
+    <string name="desc1">Banner main activity</string>
+    <string name="desc2">Banner math activity</string>
+    <string name="desc3">Animation score</string>
+    <string name="desc4">Banner result activity</string>
+    <string name="desc5">Banner vocabulary activity</string>
 
 </resources>

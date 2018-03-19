@@ -12,15 +12,24 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class MathActivity extends AppCompatActivity {
 
 
+    /**
+     * This method opens the main activity
+     */
+    public Button backbut;
     LinearLayout Q5, Q6, Q7, Q8;
     RadioGroup rgQ6, rgQ8;
+    /**
+     * This method calculates the score for this activity
+     */
+
+    int score = 0;
+    String Scor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,15 +38,16 @@ public class MathActivity extends AppCompatActivity {
         goBack();
         showImage();
 
-        Q5 = (LinearLayout) findViewById(R.id.LLQ5);
-        Q6 = (LinearLayout) findViewById(R.id.LLQ6);
-        Q7 = (LinearLayout) findViewById(R.id.LLQ7);
-        Q8 = (LinearLayout) findViewById(R.id.LLQ8);
+        Q5 = findViewById(R.id.LLQ5);
+        Q6 = findViewById(R.id.LLQ6);
+        Q7 = findViewById(R.id.LLQ7);
+        Q8 = findViewById(R.id.LLQ8);
 
         Q6.setVisibility(View.GONE);
         Q7.setVisibility(View.GONE);
         Q8.setVisibility(View.GONE);
     }
+
     /**
      * This method makes the keyboard disappear when clicking outside
      */
@@ -50,10 +60,11 @@ public class MathActivity extends AppCompatActivity {
             float x = ev.getRawX() + view.getLeft() - scrcoords[0];
             float y = ev.getRawY() + view.getTop() - scrcoords[1];
             if (x < view.getLeft() || x > view.getRight() || y < view.getTop() || y > view.getBottom())
-                ((InputMethodManager)this.getSystemService(Context.INPUT_METHOD_SERVICE)).hideSoftInputFromWindow((this.getWindow().getDecorView().getApplicationWindowToken()), 0);
+                ((InputMethodManager) this.getSystemService(Context.INPUT_METHOD_SERVICE)).hideSoftInputFromWindow((this.getWindow().getDecorView().getApplicationWindowToken()), 0);
         }
         return super.dispatchTouchEvent(ev);
     }
+
     /**
      * This method display the Question 6 and makes the Question 5 disappear
      */
@@ -107,36 +118,30 @@ public class MathActivity extends AppCompatActivity {
 
     }
 
-    /**
-     * This method calculates the score for this activity
-     */
-
-    int score = 0;
-    String Scor;
     public void calculateScore() {
 
-        Button butsub1 = (Button) findViewById(R.id.submit1);
+        Button butsub1 = findViewById(R.id.submit1);
         boolean but1Pressed = butsub1.isPressed();
-        Button butsub2 = (Button) findViewById(R.id.submit2);
+        Button butsub2 = findViewById(R.id.submit2);
         boolean but2Pressed = butsub2.isPressed();
-        Button butsub3 = (Button) findViewById(R.id.submit3);
+        Button butsub3 = findViewById(R.id.submit3);
         boolean but3Pressed = butsub3.isPressed();
-        Button butsub4 = (Button) findViewById(R.id.submit4);
+        Button butsub4 = findViewById(R.id.submit4);
         boolean but4Pressed = butsub4.isPressed();
 
-        CheckBox Q7Answer1 = (CheckBox) findViewById(R.id.Q7RightAnswer1);
+        CheckBox Q7Answer1 = findViewById(R.id.Q7RightAnswer1);
         boolean CorrectAnswer1 = Q7Answer1.isChecked();
-        CheckBox Q7Answer3 = (CheckBox) findViewById(R.id.Q7RightAnswer3);
+        CheckBox Q7Answer3 = findViewById(R.id.Q7RightAnswer3);
         boolean CorrectAnswer3 = Q7Answer3.isChecked();
 
-        rgQ6 = (RadioGroup) findViewById(R.id.rgQuestion6);
-        rgQ8 = (RadioGroup) findViewById(R.id.rgQuestion8);
+        rgQ6 = findViewById(R.id.rgQuestion6);
+        rgQ8 = findViewById(R.id.rgQuestion8);
 
         int checkedRadioButtonId = rgQ6.getCheckedRadioButtonId();
         int checkedRadioButton2Id = rgQ8.getCheckedRadioButtonId();
 
 
-        EditText str = (EditText) findViewById(R.id.text_input);
+        EditText str = findViewById(R.id.text_input);
         String test = str.getText().toString();
 
 
@@ -159,12 +164,11 @@ public class MathActivity extends AppCompatActivity {
         showImage();
     }
 
-
     /**
      * This method changes the image shown based on the score
      */
     public void showImage() {
-        ImageView progressImage = (ImageView) findViewById(R.id.progressimage);
+        ImageView progressImage = findViewById(R.id.progressimage);
         if (score == 0) {
             Scor = "Your score is:\n" + score + "%";
             progressImage.setImageResource(R.drawable.image04);
@@ -192,13 +196,8 @@ public class MathActivity extends AppCompatActivity {
         }
     }
 
-    /**
-     * This method opens the main activity
-     */
-    public Button backbut;
-
     public void goBack() {
-        backbut = (Button) findViewById(R.id.back);
+        backbut = findViewById(R.id.back);
         backbut.setOnClickListener(new View.OnClickListener() {
 
             @Override
