@@ -5,3 +5,4 @@ Features added beside the project rubric:
 - multiscreens 
 - email intend
 - 2 subjects
+- xml object for button
