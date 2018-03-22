@@ -92,9 +92,9 @@
     <string name="toastQ2">Answer question 2!</string>
     <string name="toastQ3">Answer question 3!</string>
     <string name="toastQ4">Answer question 4!</string>
-    <string name="suggestionMessage1">add Subjects</string>
-    <string name="suggestionMessage2">add Questions</string>
-    <string name="suggestionMessage3">add functions</string>
+    <string name="suggestionMessage1">"Add Subjects: "</string>
+    <string name="suggestionMessage2">\n"Add Questions: "</string>
+    <string name="suggestionMessage3">\n"Add Functions: "</string>
     <string name="scoreMessage">"Your score is: "</string>
     <string name="mail1Subject">Join me in the fight against world hunger!</string>
     <string name="mail1Text">Over a billion people suffer from hunger, there is an organization that serves food for the people in need.   You can contribute by playing their game: \'Make world better\'   Let\'s make the world a slightly better place!</string>
