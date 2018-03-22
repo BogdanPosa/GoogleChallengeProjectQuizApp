@@ -49,7 +49,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/Englishvocabulary" />
+                    android:text="@string/EnglishVocabulary" />
 
                 <RadioButton
                     android:id="@+id/buttonSelectionB"
@@ -64,7 +64,7 @@
                 style="@style/Button"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/mybutton"
-                android:text="@string/Starthelping" />
+                android:text="@string/StartHelping" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

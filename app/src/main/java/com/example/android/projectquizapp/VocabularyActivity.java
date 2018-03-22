@@ -14,8 +14,13 @@ public class VocabularyActivity extends AppCompatActivity {
     /**
      * This method takes it back to the main page
      */
-    public Button backbut1;
+    public Button backBut1;
     public Button submit1;
+    String ScoreMessage;
+    RadioGroup radioGroup1;
+    RadioGroup radioGroup2;
+    RadioGroup radioGroup3;
+    RadioGroup radioGroup4;
     int score;
     String Scor;
 
@@ -25,11 +30,18 @@ public class VocabularyActivity extends AppCompatActivity {
         setContentView(R.layout.activity_vocabulary);
         goBack1();
         submit1();
+
+        radioGroup1 = findViewById(R.id.rgQuestion1);
+        radioGroup2 = findViewById(R.id.rgQuestion2);
+        radioGroup3 = findViewById(R.id.rgQuestion3);
+        radioGroup4 = findViewById(R.id.rgQuestion4);
+
+        ScoreMessage = getString(R.string.scoreMessage);
     }
 
     public void goBack1() {
-        backbut1 = findViewById(R.id.back1);
-        backbut1.setOnClickListener(new View.OnClickListener() {
+        backBut1 = findViewById(R.id.back1);
+        backBut1.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
@@ -50,10 +62,6 @@ public class VocabularyActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                RadioGroup radioGroup1 = findViewById(R.id.rgQuestion1);
-                RadioGroup radioGroup2 = findViewById(R.id.rgQuestion2);
-                RadioGroup radioGroup3 = findViewById(R.id.rgQuestion3);
-                RadioGroup radioGroup4 = findViewById(R.id.rgQuestion4);
 
                 int checkedRadioButtonId = radioGroup1.getCheckedRadioButtonId();
                 int checkedRadioButton2Id = radioGroup2.getCheckedRadioButtonId();
@@ -75,30 +83,30 @@ public class VocabularyActivity extends AppCompatActivity {
                 }
 
                 if (checkedRadioButtonId == -1) {
-                    // No item selected
+                    // No item selected Answer 1
 
                     Context context = getApplicationContext();
-                    CharSequence text = "Answer question 1!";
+                    CharSequence text = getString(R.string.toastQ1);
                     int duration = Toast.LENGTH_SHORT;
 
                     Toast toast = Toast.makeText(context, text, duration);
                     toast.show();
                 } else {
                     if (checkedRadioButton2Id == -1) {
-                        // No item selected
+                        // No item selected Answer 2
 
                         Context context = getApplicationContext();
-                        CharSequence text = "Answer question 2!";
+                        CharSequence text = getString(R.string.toastQ2);
                         int duration = Toast.LENGTH_SHORT;
 
                         Toast toast = Toast.makeText(context, text, duration);
                         toast.show();
                     } else {
                         if (checkedRadioButton3Id == -1) {
-                            // No item selected
+                            // No item selected Answer 3
 
                             Context context = getApplicationContext();
-                            CharSequence text = "Answer question 3!";
+                            CharSequence text = getString(R.string.toastQ3);
                             int duration = Toast.LENGTH_SHORT;
 
                             Toast toast = Toast.makeText(context, text, duration);
@@ -106,36 +114,37 @@ public class VocabularyActivity extends AppCompatActivity {
                         } else {
 
                             if (checkedRadioButton4Id == -1) {
-                                // No item selected
+                                // No item selected Answer 4
 
                                 Context context = getApplicationContext();
-                                CharSequence text = "Answer question 4!";
+                                CharSequence text = getString(R.string.toastQ4);
                                 int duration = Toast.LENGTH_SHORT;
 
                                 Toast toast = Toast.makeText(context, text, duration);
                                 toast.show();
                             } else {
                                 if (score == 0) {
-                                    Scor = "Your score is:\n" + score + "%";
+                                    Scor = ScoreMessage + score + "%";
+
                                 } else {
                                     if (score == 25) {
-                                        Scor = "Your score is:\n" + score + "%";
+                                        Scor = ScoreMessage + score + "%";
                                     } else {
                                         if (score == 50) {
-                                            Scor = "Your score is:\n" + score + "%";
+                                            Scor = ScoreMessage + score + "%";
                                         } else {
                                             if (score == 75) {
-                                                Scor = "Your score is:\n" + score + "%";
+                                                Scor = ScoreMessage + score + "%";
                                             } else {
                                                 if (score == 100) {
-                                                    Scor = "Your score is:\n" + score + "%";
+                                                    Scor = ScoreMessage + score + "%";
                                                 }
                                             }
                                         }
                                     }
                                 }
                                 Intent ResultActivity = new Intent(VocabularyActivity.this, ResultActivity.class);
-                                ResultActivity.putExtra("scor", Scor);
+                                ResultActivity.putExtra("score", Scor);
 
                                 startActivity(ResultActivity);
                             }

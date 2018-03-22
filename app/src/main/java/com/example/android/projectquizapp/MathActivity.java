@@ -17,19 +17,29 @@ import android.widget.Toast;
 
 public class MathActivity extends AppCompatActivity {
 
-
-    /**
-     * This method opens the main activity
-     */
     public Button backbut;
-    LinearLayout Q5, Q6, Q7, Q8;
-    RadioGroup rgQ6, rgQ8;
-    /**
-     * This method calculates the score for this activity
-     */
-
+    String ScoreMessage;
+    LinearLayout Q5;
+    LinearLayout Q6;
+    LinearLayout Q7;
+    LinearLayout Q8;
+    RadioGroup rgQ6;
+    RadioGroup rgQ8;
     int score = 0;
     String Scor;
+    EditText str;
+    Button butSub1;
+    boolean but1Pressed;
+    Button butSub2;
+    boolean but2Pressed;
+    Button butSub3;
+    boolean but3Pressed;
+    Button butSub4;
+    boolean but4Pressed;
+    CheckBox Q7Answer1;
+    boolean CorrectAnswer1;
+    CheckBox Q7Answer3;
+    boolean CorrectAnswer3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,11 +48,21 @@ public class MathActivity extends AppCompatActivity {
         goBack();
         showImage();
 
+        butSub1 = findViewById(R.id.submit1);
+        butSub2 = findViewById(R.id.submit2);
+        butSub3 = findViewById(R.id.submit3);
+        butSub4 = findViewById(R.id.submit4);
+        str = findViewById(R.id.text_input);
+        Q7Answer1 = findViewById(R.id.Q7RightAnswer1);
+        Q7Answer3 = findViewById(R.id.Q7RightAnswer3);
+        rgQ6 = findViewById(R.id.rgQuestion6);
+        rgQ8 = findViewById(R.id.rgQuestion8);
         Q5 = findViewById(R.id.LLQ5);
         Q6 = findViewById(R.id.LLQ6);
         Q7 = findViewById(R.id.LLQ7);
         Q8 = findViewById(R.id.LLQ8);
 
+        ScoreMessage = getString(R.string.scoreMessage);
         Q6.setVisibility(View.GONE);
         Q7.setVisibility(View.GONE);
         Q8.setVisibility(View.GONE);
@@ -103,45 +123,32 @@ public class MathActivity extends AppCompatActivity {
 
     public void subQ8Clicked(View v) {
         calculateScore();
-        //     showProgress();
 
         Q7.setVisibility(View.GONE);
         Context context = getApplicationContext();
-        CharSequence text = "Your got: " + score + "%";
+        CharSequence text = getString(R.string.mathInfo) + score + "%";
         int duration = Toast.LENGTH_SHORT;
 
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
         Intent ResultActivity = new Intent(MathActivity.this, ResultActivity.class);
-        ResultActivity.putExtra("scor", Scor);
+        ResultActivity.putExtra("score", Scor);
         startActivity(ResultActivity);
 
     }
 
     public void calculateScore() {
 
-        Button butsub1 = findViewById(R.id.submit1);
-        boolean but1Pressed = butsub1.isPressed();
-        Button butsub2 = findViewById(R.id.submit2);
-        boolean but2Pressed = butsub2.isPressed();
-        Button butsub3 = findViewById(R.id.submit3);
-        boolean but3Pressed = butsub3.isPressed();
-        Button butsub4 = findViewById(R.id.submit4);
-        boolean but4Pressed = butsub4.isPressed();
-
-        CheckBox Q7Answer1 = findViewById(R.id.Q7RightAnswer1);
-        boolean CorrectAnswer1 = Q7Answer1.isChecked();
-        CheckBox Q7Answer3 = findViewById(R.id.Q7RightAnswer3);
-        boolean CorrectAnswer3 = Q7Answer3.isChecked();
-
-        rgQ6 = findViewById(R.id.rgQuestion6);
-        rgQ8 = findViewById(R.id.rgQuestion8);
+        but1Pressed = butSub1.isPressed();
+        but2Pressed = butSub2.isPressed();
+        but3Pressed = butSub3.isPressed();
+        but4Pressed = butSub4.isPressed();
+        CorrectAnswer1 = Q7Answer1.isChecked();
+        CorrectAnswer3 = Q7Answer3.isChecked();
 
         int checkedRadioButtonId = rgQ6.getCheckedRadioButtonId();
         int checkedRadioButton2Id = rgQ8.getCheckedRadioButtonId();
 
-
-        EditText str = findViewById(R.id.text_input);
         String test = str.getText().toString();
 
 
@@ -152,7 +159,6 @@ public class MathActivity extends AppCompatActivity {
                 score = score + 25;
             } else {
                 if (CorrectAnswer1 && CorrectAnswer3 && but3Pressed) {
-
                     score = score + 25;
                 } else {
                     if (checkedRadioButton2Id == R.id.rb3Answer8 && but4Pressed) {
@@ -170,24 +176,24 @@ public class MathActivity extends AppCompatActivity {
     public void showImage() {
         ImageView progressImage = findViewById(R.id.progressimage);
         if (score == 0) {
-            Scor = "Your score is:\n" + score + "%";
+            Scor = ScoreMessage + score + "%";
             progressImage.setImageResource(R.drawable.image04);
 
         } else {
             if (score == 25) {
-                Scor = "Your score is:\n" + score + "%";
+                Scor = ScoreMessage + score + "%";
                 progressImage.setImageResource(R.drawable.image14);
             } else {
                 if (score == 50) {
-                    Scor = "Your score is:\n" + score + "%";
+                    Scor = ScoreMessage + score + "%";
                     progressImage.setImageResource(R.drawable.image24);
                 } else {
                     if (score == 75) {
-                        Scor = "Your score is:\n" + score + "%";
+                        Scor = ScoreMessage + score + "%";
                         progressImage.setImageResource(R.drawable.image34);
                     } else {
                         if (score == 100) {
-                            Scor = "Your score is:\n" + score + "%";
+                            Scor = ScoreMessage + score + "%";
                             progressImage.setImageResource(R.drawable.image44);
                         }
                     }
@@ -208,5 +214,4 @@ public class MathActivity extends AppCompatActivity {
             }
         });
     }
-
 }

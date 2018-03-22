@@ -52,22 +52,22 @@
                         <RadioButton
                             android:id="@+id/rb1Answer1"
                             style="@style/Body"
-                            android:text="@string/Q1Varianta1" />
+                            android:text="@string/Q1Option1" />
 
                         <RadioButton
                             android:id="@+id/rb1Answer2"
                             style="@style/Body"
-                            android:text="@string/Q1Varianta2" />
+                            android:text="@string/Q1Option2" />
 
                         <RadioButton
                             android:id="@+id/rb1Answer3"
                             style="@style/Body"
-                            android:text="@string/Q1Varianta3" />
+                            android:text="@string/Q1Option3" />
 
                         <RadioButton
                             android:id="@+id/rb1Answer4"
                             style="@style/Body"
-                            android:text="@string/Q1Varianta4" />
+                            android:text="@string/Q1Option4" />
                     </RadioGroup>
                 </LinearLayout>
 
@@ -93,22 +93,22 @@
                         <RadioButton
                             android:id="@+id/rb2Answer1"
                             style="@style/Body"
-                            android:text="@string/Q2Varianta1" />
+                            android:text="@string/Q2Option1" />
 
                         <RadioButton
                             android:id="@+id/rb2Answer2"
                             style="@style/Body"
-                            android:text="@string/Q2Varianta2" />
+                            android:text="@string/Q2Option2" />
 
                         <RadioButton
                             android:id="@+id/rb2Answer3"
                             style="@style/Body"
-                            android:text="@string/Q2Varianta3" />
+                            android:text="@string/Q2Option3" />
 
                         <RadioButton
                             android:id="@+id/rb2Answer4"
                             style="@style/Body"
-                            android:text="@string/Q2Varianta4" />
+                            android:text="@string/Q2Option4" />
                     </RadioGroup>
                 </LinearLayout>
             </LinearLayout>
@@ -140,22 +140,22 @@
                         <RadioButton
                             android:id="@+id/rb3Answer1"
                             style="@style/Body"
-                            android:text="@string/Q3Varianta1" />
+                            android:text="@string/Q3Option1" />
 
                         <RadioButton
                             android:id="@+id/rb3Answer2"
                             style="@style/Body"
-                            android:text="@string/Q3Varianta2" />
+                            android:text="@string/Q3Option2" />
 
                         <RadioButton
                             android:id="@+id/rb3Answer3"
                             style="@style/Body"
-                            android:text="@string/Q3Varianta3" />
+                            android:text="@string/Q3Option3" />
 
                         <RadioButton
                             android:id="@+id/rb3Answer4"
                             style="@style/Body"
-                            android:text="@string/Q3Varianta4" />
+                            android:text="@string/Q3Option4" />
                     </RadioGroup>
                 </LinearLayout>
 
@@ -181,23 +181,23 @@
                         <RadioButton
                             android:id="@+id/rb4Answer1"
                             style="@style/Body"
-                            android:text="@string/Q4Varianta1" />
+                            android:text="@string/Q4Option1" />
 
                         <RadioButton
                             android:id="@+id/rb4Answer2"
                             style="@style/Body"
-                            android:text="@string/Q4Varianta2" />
+                            android:text="@string/Q4Option2" />
 
 
                         <RadioButton
                             android:id="@+id/rb4Answer3"
                             style="@style/Body"
-                            android:text="@string/Q4Varianta3" />
+                            android:text="@string/Q4Option3" />
 
                         <RadioButton
                             android:id="@+id/rb4Answer4"
                             style="@style/Body"
-                            android:text="@string/Q4Varianta4" />
+                            android:text="@string/Q4Option4" />
 
                     </RadioGroup>
                 </LinearLayout>

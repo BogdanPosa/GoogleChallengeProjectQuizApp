@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(Vocabulary);
                 } else {
                     Context context = getApplicationContext();
-                    CharSequence text = "Pick one category!";
+                    CharSequence text = getString(R.string.mainInfo);
                     int duration = Toast.LENGTH_SHORT;
                     Toast toast = Toast.makeText(context, text, duration);
                     toast.show();

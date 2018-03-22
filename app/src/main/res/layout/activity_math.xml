@@ -48,15 +48,16 @@
 
                         <TextView
                             style="@style/SubTitle"
-                            android:text="@string/Intrebare5" />
+                            android:text="@string/Question5" />
 
                         <EditText
                             android:id="@+id/text_input"
                             style="@style/Body"
                             android:layout_width="match_parent"
+                            android:layout_marginLeft="0dp"
                             android:layout_marginStart="0dp"
                             android:hint="@string/hint"
-                            android:inputType="textCapWords" />
+                            android:inputType="numberDecimal" />
 
                         <Button
                             android:id="@+id/submit1"
@@ -70,7 +71,6 @@
 
                 <LinearLayout
                     android:layout_width="wrap_content"
-
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:saveEnabled="true">
@@ -83,30 +83,29 @@
 
                         <TextView
                             style="@style/SubTitle"
-                            android:text="@string/Intrebare6" />
+                            android:text="@string/Question6" />
 
                         <RadioGroup
                             android:id="@+id/rgQuestion6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
 
+                            <RadioButton
+                                style="@style/Body"
+                                android:text="@string/Q6Option1" />
 
                             <RadioButton
                                 style="@style/Body"
-                                android:text="@string/Q6Varianta1" />
-
-                            <RadioButton
-                                style="@style/Body"
-                                android:text="@string/Q6Varianta2" />
+                                android:text="@string/Q6Option2" />
 
                             <RadioButton
                                 android:id="@+id/rb3Answer6"
                                 style="@style/Body"
-                                android:text="@string/Q6Varianta3" />
+                                android:text="@string/Q6Option3" />
 
                             <RadioButton
                                 style="@style/Body"
-                                android:text="@string/Q6Varianta4" />
+                                android:text="@string/Q6Option4" />
 
                         </RadioGroup>
 
@@ -134,25 +133,25 @@
 
                         <TextView
                             style="@style/SubTitle"
-                            android:text="@string/Intrebare7" />
+                            android:text="@string/Question7" />
 
                         <CheckBox
                             android:id="@+id/Q7RightAnswer1"
                             style="@style/Body"
-                            android:text="@string/Q7Varianta1" />
+                            android:text="@string/Q7Option1" />
 
                         <CheckBox
                             style="@style/Body"
-                            android:text="@string/Q7Varianta2" />
+                            android:text="@string/Q7Option2" />
 
                         <CheckBox
                             android:id="@+id/Q7RightAnswer3"
                             style="@style/Body"
-                            android:text="@string/Q7Varianta3" />
+                            android:text="@string/Q7Option3" />
 
                         <CheckBox
                             style="@style/Body"
-                            android:text="@string/Q7Varianta4" />
+                            android:text="@string/Q7Option4" />
 
                         <Button
                             android:id="@+id/submit3"
@@ -178,7 +177,7 @@
 
                         <TextView
                             style="@style/SubTitle"
-                            android:text="@string/Intrebare8" />
+                            android:text="@string/Question8" />
 
                         <RadioGroup
                             android:id="@+id/rgQuestion8"
@@ -187,20 +186,20 @@
 
                             <RadioButton
                                 style="@style/Body"
-                                android:text="@string/Q8Varianta1" />
+                                android:text="@string/Q8Option1" />
 
                             <RadioButton
                                 style="@style/Body"
-                                android:text="@string/Q8Varianta2" />
+                                android:text="@string/Q8Option2" />
 
                             <RadioButton
                                 android:id="@+id/rb3Answer8"
                                 style="@style/Body"
-                                android:text="@string/Q8Varianta3" />
+                                android:text="@string/Q8Option3" />
 
                             <RadioButton
                                 style="@style/Body"
-                                android:text="@string/Q8Varianta4" />
+                                android:text="@string/Q8Option4" />
                         </RadioGroup>
 
                         <Button

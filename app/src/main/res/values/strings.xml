@@ -8,39 +8,39 @@
     <string name="Disclaimer">For each right answer \n We\'ll give a meal for the ones in need</string>
     <string name="pick_one">"Pick one category!"</string>
     <string name="SelectSubject">"Select a subject"</string>
-    <string name="Starthelping"> "Start helping"</string>
-    <string name="Englishvocabulary">" English vocabulary"</string>
+    <string name="StartHelping"> "Start helping"</string>
+    <string name="EnglishVocabulary">" English vocabulary"</string>
     <string name="BasicMath">"Basic Math"</string>
 
     <!--Strings for activity Math-->
 
     <string name="TitleMath">"Add some food on the table! "</string>
-    <string name="Intrebare5">"1) 0.4 x 3 = "</string>
+    <string name="Question5">"1) 0.4 x 3 = "</string>
     <string name="hint">"Type your answer here"</string>
     <string name="Submit1">"Submit"</string>
-    <string name="Intrebare6">"2) 1.1 x 1.1 = "</string>
-    <string name="Q6Varianta1">"11.1"</string>
-    <string name="Q6Varianta2">"111"</string>
-    <string name="Q6Varianta3">"1.21 "</string>
-    <string name="Q6Varianta4">"12.1"</string>
+    <string name="Question6">"2) 1.1 x 1.1 = "</string>
+    <string name="Q6Option1">"11.1"</string>
+    <string name="Q6Option2">"111"</string>
+    <string name="Q6Option3">"1.21 "</string>
+    <string name="Q6Option4">"12.1"</string>
     <string name="Submit2">"Submit"</string>
-    <string name="Intrebare7">"3) A^2 + A^2 = "</string>
-    <string name="Q7Varianta1">"A^2 x 2 "</string>
-    <string name="Q7Varianta2">"A^4"</string>
-    <string name="Q7Varianta3">"2A^2 "</string>
-    <string name="Q7Varianta4">"2A^4"</string>
+    <string name="Question7">"3) A^2 + A^2 = "</string>
+    <string name="Q7Option1">"A^2 x 2 "</string>
+    <string name="Q7Option2">"A^4"</string>
+    <string name="Q7Option3">"2A^2 "</string>
+    <string name="Q7Option4">"2A^4"</string>
     <string name="Submit3">"Submit"</string>
-    <string name="Intrebare8">"4) 1/2 / 2/5 = "</string>
-    <string name="Q8Varianta1">"3/4"</string>
-    <string name="Q8Varianta2">"2/5"</string>
-    <string name="Q8Varianta3">"5/4 "</string>
-    <string name="Q8Varianta4">"3/5"</string>
+    <string name="Question8">"4) 1/2 / 2/5 = "</string>
+    <string name="Q8Option1">"3/4"</string>
+    <string name="Q8Option2">"2/5"</string>
+    <string name="Q8Option3">"5/4 "</string>
+    <string name="Q8Option4">"3/5"</string>
     <string name="Submit4">"Submit"</string>
     <string name="Back1">"Home"</string>
 
     <!--Strings for activity Result-->
 
-    <string name="CongradulationsMessage">"Thank you for helping!"</string>
+    <string name="CongratsMessage">"Thank you for helping!"</string>
     <string name="Score">"Your score is:"</string>
     <string name="Back2">"Home"</string>
     <string name="Share">"Share"</string>
@@ -58,28 +58,28 @@
 
     <string name="TitleVocabulary">"Let's talk about hunger"</string>
     <string name="Question1">"1) <b>rhabdomancy</b> means: "</string>
-    <string name="Q1Varianta1">"divination with a rod, wand, or the like "</string>
-    <string name="Q1Varianta2">"divining with crystal, or the like"</string>
-    <string name="Q1Varianta3">"crazy about rhubarb"</string>
-    <string name="Q1Varianta4">"obsession with red"</string>
+    <string name="Q1Option1">"divination with a rod, wand, or the like "</string>
+    <string name="Q1Option2">"divining with crystal, or the like"</string>
+    <string name="Q1Option3">"crazy about rhubarb"</string>
+    <string name="Q1Option4">"obsession with red"</string>
 
     <string name="Question2">"2) <b>rheology</b> means: "</string>
-    <string name="Q2Varianta1">"study of heat"</string>
-    <string name="Q2Varianta2">"flow of matter "</string>
-    <string name="Q2Varianta3">"study of rivers"</string>
-    <string name="Q2Varianta4">"heat flow patterns"</string>
+    <string name="Q2Option1">"study of heat"</string>
+    <string name="Q2Option2">"flow of matter "</string>
+    <string name="Q2Option3">"study of rivers"</string>
+    <string name="Q2Option4">"heat flow patterns"</string>
 
     <string name="Question3">"3) <b>sciage</b> means: "</string>
-    <string name="Q3Varianta1">"saw teeth"</string>
-    <string name="Q3Varianta2">"scraping"</string>
-    <string name="Q3Varianta3">"scar tissue"</string>
-    <string name="Q3Varianta4">"saw-like movement "</string>
+    <string name="Q3Option1">"saw teeth"</string>
+    <string name="Q3Option2">"scraping"</string>
+    <string name="Q3Option3">"scar tissue"</string>
+    <string name="Q3Option4">"saw-like movement "</string>
 
     <string name="Question4">"4) <b>lansquenet</b> means: "</string>
-    <string name="Q4Varianta1">"basket of fruit"</string>
-    <string name="Q4Varianta2">"card game "</string>
-    <string name="Q4Varianta3">"fancy dog collar"</string>
-    <string name="Q4Varianta4">"lacy bodice"</string>
+    <string name="Q4Option1">"basket of fruit"</string>
+    <string name="Q4Option2">"card game "</string>
+    <string name="Q4Option3">"fancy dog collar"</string>
+    <string name="Q4Option4">"lacy bodice"</string>
 
     <string name="Submit5">"Submit"</string>
     <string name="Back3">"Home"</string>
@@ -88,5 +88,20 @@
     <string name="desc3">Animation score</string>
     <string name="desc4">Banner result activity</string>
     <string name="desc5">Banner vocabulary activity</string>
+    <string name="toastQ1">Answer question 1!</string>
+    <string name="toastQ2">Answer question 2!</string>
+    <string name="toastQ3">Answer question 3!</string>
+    <string name="toastQ4">Answer question 4!</string>
+    <string name="suggestionMessage1">add Subjects</string>
+    <string name="suggestionMessage2">add Questions</string>
+    <string name="suggestionMessage3">add functions</string>
+    <string name="scoreMessage">"Your score is: "</string>
+    <string name="mail1Subject">Join me in the fight against world hunger!</string>
+    <string name="mail1Text">Over a billion people suffer from hunger, there is an organization that serves food for the people in need.   You can contribute by playing their game: \'Make world better\'   Let\'s make the world a slightly better place!</string>
+    <string name="mail2Subject">Make world better app review</string>
+    <string name="resultInfo1">Please select your answer!</string>
+    <string name="resultInfo2">How about you reconsider your answer!</string>
+    <string name="mainInfo">Pick one category!</string>
+    <string name="mathInfo">Your got:</string>
 
 </resources>

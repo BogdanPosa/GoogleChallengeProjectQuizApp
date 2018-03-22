@@ -19,7 +19,7 @@
         <TextView
             android:id="@+id/Congrats"
             style="@style/Title"
-            android:text="@string/CongradulationsMessage"
+            android:text="@string/CongratsMessage"
             android:textSize="24sp" />
 
         <LinearLayout
@@ -79,23 +79,23 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/Feedbacksugestion"
+                android:id="@+id/FeedbackSuggestion"
                 style="@style/SubTitle"
                 android:text="@string/Suggest"
                 android:textStyle="bold" />
 
             <CheckBox
-                android:id="@+id/sugestion1"
+                android:id="@+id/suggestion1"
                 style="@style/Body"
                 android:text="@string/Suggestion1" />
 
             <CheckBox
-                android:id="@+id/sugestion2"
+                android:id="@+id/suggestion2"
                 style="@style/Body"
                 android:text="@string/Suggestion2" />
 
             <CheckBox
-                android:id="@+id/sugestion3"
+                android:id="@+id/suggestion3"
                 style="@style/Body"
                 android:text="@string/Suggestion3" />
         </LinearLayout>
@@ -126,7 +126,7 @@
         </RadioGroup>
 
         <Button
-            android:id="@+id/sendfeedback"
+            android:id="@+id/sendFeedback"
             style="@style/Button"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/mybutton"

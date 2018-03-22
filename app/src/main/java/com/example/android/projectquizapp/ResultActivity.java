@@ -7,27 +7,37 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class ResultActivity extends AppCompatActivity {
 
-    public Button sendfeed;
-    public Button backbut2;
+
+    public Button sendFeed;
+    public Button backBut2;
     public Button share;
+    boolean addSubjects;
+    boolean addQuestions;
+    boolean addFunctions;
+    CheckBox suggestion1;
+    CheckBox suggestion2;
+    CheckBox suggestion3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
         goBack2();
-        sendfeedback();
+        sendFeedback();
         share();
 
         TextView text = findViewById(R.id.Score);
-        text.setText(getIntent().getExtras().getString("scor"));
-
+        text.setText(getIntent().getExtras().getString("score"));
+        suggestion1 = findViewById(R.id.suggestion1);
+        suggestion2 = findViewById(R.id.suggestion2);
+        suggestion3 = findViewById(R.id.suggestion3);
     }
 
     /**
@@ -35,8 +45,8 @@ public class ResultActivity extends AppCompatActivity {
      */
 
     public void goBack2() {
-        backbut2 = findViewById(R.id.back2);
-        backbut2.setOnClickListener(new View.OnClickListener() {
+        backBut2 = findViewById(R.id.back2);
+        backBut2.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
@@ -50,36 +60,38 @@ public class ResultActivity extends AppCompatActivity {
     /**
      * This method display the Feedback responses
      */
-    public void sendfeedback() {
-        sendfeed = findViewById(R.id.sendfeedback);
-        sendfeed.setOnClickListener(new View.OnClickListener() {
+    public void sendFeedback() {
+        sendFeed = findViewById(R.id.sendFeedback);
+        sendFeed.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-
+                addSubjects = suggestion1.isChecked();
+                addQuestions = suggestion2.isChecked();
+                addFunctions = suggestion3.isChecked();
                 RadioGroup radioGroupYN = findViewById(R.id.rgFeedbackYN);
-                int ratedapp = radioGroupYN.getCheckedRadioButtonId();
-                if (ratedapp == -1) {
+                int ratedApp = radioGroupYN.getCheckedRadioButtonId();
+                if (ratedApp == -1) {
                     Context context = getApplicationContext();
-                    CharSequence text = "Please select your answer!";
+                    CharSequence text = getString(R.string.resultInfo1);
                     int duration = Toast.LENGTH_LONG;
-
                     Toast toast = Toast.makeText(context, text, duration);
                     toast.show();
                 } else {
-                    if (ratedapp == R.id.FeedbackSelectionA) {
-                        Context context = getApplicationContext();
-                        CharSequence text = "Thank you for your feedback!";
-                        int duration = Toast.LENGTH_LONG;
-
-                        Toast toast = Toast.makeText(context, text, duration);
-                        toast.show();
+                    if (ratedApp == R.id.FeedbackSelectionA) {
+                        //Intents the feedback mail
+                        Intent intent = new Intent(Intent.ACTION_SENDTO);
+                        intent.setData(Uri.parse("mailto:")); // only email apps should handle this
+                        intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.mail2Subject));
+                        intent.putExtra(Intent.EXTRA_TEXT, getString(R.string.suggestionMessage1) + addSubjects + getString(R.string.suggestionMessage2) + addQuestions + getString(R.string.suggestionMessage3) + addFunctions);
+                        if (intent.resolveActivity(getPackageManager()) != null) {
+                            startActivity(intent);
+                        }
                     } else {
-                        if (ratedapp == R.id.FeedbackSelectionB) {
+                        if (ratedApp == R.id.FeedbackSelectionB) {
                             Context context = getApplicationContext();
-                            CharSequence text = "How about you reconsider your answer!";
+                            CharSequence text = getString(R.string.resultInfo2);
                             int duration = Toast.LENGTH_LONG;
-
                             Toast toast = Toast.makeText(context, text, duration);
                             toast.show();
 
@@ -91,7 +103,7 @@ public class ResultActivity extends AppCompatActivity {
     }
 
     /**
-     * This method intents the mail
+     * This method intents the Share mail
      */
     public void share() {
         share = findViewById(R.id.share);
@@ -101,8 +113,8 @@ public class ResultActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Intent.ACTION_SENDTO);
                 intent.setData(Uri.parse("mailto:")); // only email apps should handle this
-                intent.putExtra(Intent.EXTRA_SUBJECT, "Join me in the fight against world hunger!");
-                intent.putExtra(Intent.EXTRA_TEXT, "Over a billion people suffer from hunger, there is an organization that serves food for the people in need.\n \nYou can contribute by playing their game: 'Make world better'\n\n Let's make the world a slightly better place!");
+                intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.mail1Subject));
+                intent.putExtra(Intent.EXTRA_TEXT, getString(R.string.mail1Text));
                 if (intent.resolveActivity(getPackageManager()) != null) {
                     startActivity(intent);
                 }
