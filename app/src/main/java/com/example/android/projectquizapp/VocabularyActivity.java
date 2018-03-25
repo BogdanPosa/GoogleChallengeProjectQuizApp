@@ -11,25 +11,22 @@ import android.widget.Toast;
 
 public class VocabularyActivity extends AppCompatActivity {
 
-    /**
-     * This method takes it back to the main page
-     */
-    public Button backBut1;
-    public Button submit1;
+    public Button homeButton;
+    public Button submitAnswers;
     String ScoreMessage;
-    RadioGroup radioGroup1;
-    RadioGroup radioGroup2;
-    RadioGroup radioGroup3;
-    RadioGroup radioGroup4;
-    int score;
     String Scor;
+    private RadioGroup radioGroup1;
+    private RadioGroup radioGroup2;
+    private RadioGroup radioGroup3;
+    private RadioGroup radioGroup4;
+    private int score;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vocabulary);
-        goBack1();
-        submit1();
+        goHome();
+        submitAnswersVocabulary();
 
         radioGroup1 = findViewById(R.id.rgQuestion1);
         radioGroup2 = findViewById(R.id.rgQuestion2);
@@ -39,9 +36,9 @@ public class VocabularyActivity extends AppCompatActivity {
         ScoreMessage = getString(R.string.scoreMessage);
     }
 
-    public void goBack1() {
-        backBut1 = findViewById(R.id.back1);
-        backBut1.setOnClickListener(new View.OnClickListener() {
+    public void goHome() {
+        homeButton = findViewById(R.id.homeButton1);
+        homeButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
@@ -52,12 +49,12 @@ public class VocabularyActivity extends AppCompatActivity {
         });
     }
 
-    /**
+    /*
      * This method calculates and submits the score for this subject
      */
-    public void submit1() {
-        submit1 = findViewById(R.id.submit1);
-        submit1.setOnClickListener(new View.OnClickListener() {
+    public void submitAnswersVocabulary() {
+        submitAnswers = findViewById(R.id.submitAnswersVocabulary);
+        submitAnswers.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
@@ -68,7 +65,7 @@ public class VocabularyActivity extends AppCompatActivity {
                 int checkedRadioButton3Id = radioGroup3.getCheckedRadioButtonId();
                 int checkedRadioButton4Id = radioGroup4.getCheckedRadioButtonId();
 
-
+                // checks if the answers are correct
                 if (checkedRadioButtonId == R.id.rb1Answer1) {
                     score = score + 25;
                 }
@@ -82,6 +79,7 @@ public class VocabularyActivity extends AppCompatActivity {
                     score = score + 25;
                 }
 
+                // checks the questions are answered
                 if (checkedRadioButtonId == -1) {
                     // No item selected Answer 1
 
@@ -122,6 +120,8 @@ public class VocabularyActivity extends AppCompatActivity {
 
                                 Toast toast = Toast.makeText(context, text, duration);
                                 toast.show();
+
+                                //updates the score message
                             } else {
                                 if (score == 0) {
                                     Scor = ScoreMessage + score + "%";
@@ -143,6 +143,8 @@ public class VocabularyActivity extends AppCompatActivity {
                                         }
                                     }
                                 }
+
+                                //Start the result activity
                                 Intent ResultActivity = new Intent(VocabularyActivity.this, ResultActivity.class);
                                 ResultActivity.putExtra("score", Scor);
 

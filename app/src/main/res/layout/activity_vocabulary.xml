@@ -22,7 +22,7 @@
             android:orientation="vertical">
 
             <TextView
-                style="@style/Title"
+                style="@style/SubTitle.Black"
                 android:text="@string/TitleVocabulary" />
 
             <LinearLayout
@@ -177,7 +177,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-
                         <RadioButton
                             android:id="@+id/rb4Answer1"
                             style="@style/Body"
@@ -187,7 +186,6 @@
                             android:id="@+id/rb4Answer2"
                             style="@style/Body"
                             android:text="@string/Q4Option2" />
-
 
                         <RadioButton
                             android:id="@+id/rb4Answer3"
@@ -205,13 +203,13 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/submit1"
+            android:id="@+id/submitAnswersVocabulary"
             style="@style/Button"
             android:background="@drawable/mybutton"
             android:text="@string/Submit5" />
 
         <Button
-            android:id="@+id/back1"
+            android:id="@+id/homeButton1"
             style="@style/Button"
             android:layout_gravity="center"
             android:background="@drawable/mybutton"

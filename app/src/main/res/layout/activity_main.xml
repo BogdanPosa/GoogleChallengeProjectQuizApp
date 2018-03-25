@@ -20,7 +20,7 @@
 
         <TextView
             android:id="@+id/motto"
-            style="@style/Title"
+            style="@style/SubTitle.Black"
             android:text="@string/Motto"
             android:textSize="24sp" />
 
@@ -60,7 +60,7 @@
             </RadioGroup>
 
             <Button
-                android:id="@+id/start"
+                android:id="@+id/startButton"
                 style="@style/Button"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/mybutton"

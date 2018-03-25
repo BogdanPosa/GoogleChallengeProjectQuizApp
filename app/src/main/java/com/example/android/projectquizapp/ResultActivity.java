@@ -15,21 +15,21 @@ import android.widget.Toast;
 public class ResultActivity extends AppCompatActivity {
 
 
-    public Button sendFeed;
-    public Button backBut2;
+    public Button sendFeedback;
+    public Button homeButton;
     public Button share;
     boolean addSubjects;
     boolean addQuestions;
     boolean addFunctions;
-    CheckBox suggestion1;
-    CheckBox suggestion2;
-    CheckBox suggestion3;
+    private CheckBox suggestion1;
+    private CheckBox suggestion2;
+    private CheckBox suggestion3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
-        goBack2();
+        goHome();
         sendFeedback();
         share();
 
@@ -40,13 +40,12 @@ public class ResultActivity extends AppCompatActivity {
         suggestion3 = findViewById(R.id.suggestion3);
     }
 
-    /**
+    /*
      * This method starts the Main activity
      */
-
-    public void goBack2() {
-        backBut2 = findViewById(R.id.back2);
-        backBut2.setOnClickListener(new View.OnClickListener() {
+    public void goHome() {
+        homeButton = findViewById(R.id.homeButton2);
+        homeButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
@@ -57,12 +56,12 @@ public class ResultActivity extends AppCompatActivity {
         });
     }
 
-    /**
+    /*
      * This method display the Feedback responses
      */
     public void sendFeedback() {
-        sendFeed = findViewById(R.id.sendFeedback);
-        sendFeed.setOnClickListener(new View.OnClickListener() {
+        sendFeedback = findViewById(R.id.sendFeedback);
+        sendFeedback.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
@@ -102,7 +101,7 @@ public class ResultActivity extends AppCompatActivity {
         });
     }
 
-    /**
+    /*
      * This method intents the Share mail
      */
     public void share() {

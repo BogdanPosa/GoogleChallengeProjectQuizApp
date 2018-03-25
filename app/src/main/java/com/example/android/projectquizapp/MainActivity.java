@@ -13,7 +13,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
 
-    public Button but1;
+    public Button startButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,9 +23,13 @@ public class MainActivity extends AppCompatActivity {
         startHelping();
     }
 
+
+    /*
+  * This method starts the math or the vocabulary activity based on user selection
+  */
     public void startHelping() {
-        but1 = findViewById(R.id.start);
-        but1.setOnClickListener(new View.OnClickListener() {
+        startButton = findViewById(R.id.startButton);
+        startButton.setOnClickListener(new View.OnClickListener() {
             RadioButton selectionA = (RadioButton) findViewById(R.id.buttonSelectionA);
             RadioButton selectionB = (RadioButton) findViewById(R.id.buttonSelectionB);
 

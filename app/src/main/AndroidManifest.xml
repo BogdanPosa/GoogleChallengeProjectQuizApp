@@ -23,12 +23,13 @@
             android:label="Vocabulary" />
         <activity android:name=".MathActivity"
             android:configChanges="orientation|keyboardHidden"
+            android:label="Math"
             android:windowSoftInputMode="stateHidden"/>
 
 
         <activity android:name=".ResultActivity"
             android:configChanges="orientation|keyboardHidden"
-            />
+            android:label="Results" />
     </application>
 
 </manifest>

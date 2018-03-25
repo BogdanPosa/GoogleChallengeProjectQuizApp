@@ -18,7 +18,7 @@
 
         <TextView
             android:id="@+id/Congrats"
-            style="@style/Title"
+            style="@style/SubTitle.Black"
             android:text="@string/CongratsMessage"
             android:textSize="24sp" />
 
@@ -30,7 +30,7 @@
 
             <TextView
                 android:id="@+id/Score"
-                style="@style/Title"
+                style="@style/SubTitle.Black"
                 android:text="@string/Score" />
 
             <TextView
@@ -46,7 +46,7 @@
             android:layout_height="wrap_content">
 
             <Button
-                android:id="@+id/back2"
+                android:id="@+id/homeButton2"
                 style="@style/Button"
                 android:layout_width="0dp"
                 android:layout_weight="1"
